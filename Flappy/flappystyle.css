@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#canvas{
+  
+    background-image: url('flappybirdbg.png');
+    background-size: cover;
+    display: block;
+   
+}
+.container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+}

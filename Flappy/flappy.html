@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/new.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <title>Flappy Bird</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+#canvas{
+  border: 1px solid black;
+    background-color: rgb(153, 239, 250);
+box-shadow: 0px 0px 8px gray;
+    background-image: url('flappybirdbg.png');
+    background-size: cover;
+    display: block;
+   margin: 0 auto;
+} 
+ .filter{
+        filter: invert();
+      }
+    </style>
+</head>
+
+<body class="bg-body-tertiary">
+
+  <nav class="navbar navbar-expand-lg bg-main ">
+    <div class="container">
+      <a class="navbar-brand text-black " href="../index.html"><img src="../mainpics/logo.png" alt="" class="img-fluid w-75 filter"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link text-white lead active pe-5" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead pe-5" href="../Flappy/flappy.html">Flappy Bird</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead pe-5" href="../Memory/memory.html">Memory Tiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead pe-5" href="../Brick/brick.html">Brick Breaker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead" href="../pong/pong.html">Pong</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<div class="container">
+        <div class="row justify-content-center align-items-center pt-2">
+
+            <div class="col-7 col-lg-5 text-center ">
+             <h1 class="display-6">Avoid the pipes!</h1>
+             <p class="lead"><span id="control">Press SPACE</span> to jump or restart the game.</p>
+            </div>
+
+            <div class="col-12 col-lg-4">
+            <canvas id="canvas"></canvas>
+           </div>
+
+        </div>
+</div>
+
+    <script src="flappyscript.js"></script>
+</body>
+</html>

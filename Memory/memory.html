@@ -1,0 +1,155 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/new.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+   
+    <title>Memory Tiles</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+.board{
+  justify-content: center;
+    padding: 60px;
+    margin: 20px auto;
+    min-width: 360px;
+    max-width: 480px;
+    height: 450px;
+    display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 8px;
+grid-row-gap: 16px;
+    background-color: rgb(68, 67, 67);
+   
+    border-radius: 5%;
+}   
+
+i{
+  display: flex;
+   align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: transparent;
+    background-color: rgb(194, 194, 194);
+    max-width: 70px;
+   
+    min-width: 20px;
+    height: 100px;
+    border-radius: 5%;
+    
+}
+.tile-open{
+    color: red;
+
+    transition: color 0.4s;
+}
+.matching{
+    color:rgb(35, 194, 35);
+    background-color: rgb(39, 39, 39);
+}
+#rsbtn{
+    display: flex;
+  margin-top: 20px;
+    justify-content: center;
+}
+.reset{
+    color: #000000 !important;
+    font-size: 14px;
+    cursor: pointer;
+   
+    padding: 13px 28px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    background: #D41B1B;
+    background: linear-gradient(to top, #1bd449, #1cff55);
+}
+i:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 0px rgba(255,255,255,0.75);
+}
+
+.filter{
+        filter: invert();
+      }
+    </style>
+
+</head>
+<body class="bg-body-tertiary">
+   
+  <nav class="navbar navbar-expand-lg bg-main ">
+    <div class="container">
+      <a class="navbar-brand text-black " href="../index.html"><img src="../mainpics/logo.png" alt="" class="img-fluid w-75 filter"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="filter navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end pe-5" id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link text-white lead active pe-5" aria-current="page" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead pe-5" href="../Flappy/flappy.html">Flappy Bird</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead pe-5" href="../Memory/memory.html">Memory Tiles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead pe-5" href="../Brick/brick.html">Brick Breaker</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white lead" href="../pong/pong.html">Pong</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-5 col-lg-4 text-center">
+          <h1 class="title pt-4 display-6 ">Match the tiles!</h1>
+          <p class="lead">Find all the matching tiles to win.</p>
+        </div>
+          <div class="col-lg-6 col-12">
+              <div class="board">
+                      <i id="icon-1" class="bi"></i>
+               
+                      <i id="icon-2" class="bi"></i>
+            
+                      <i id="icon-3" class="bi"></i>
+            
+                      <i id="icon-4" class="bi"></i>
+            
+                      <i id="icon-5" class="bi"></i>
+               
+                      <i id="icon-6" class="bi"></i>
+            
+                      <i id="icon-7" class="bi"></i>
+            
+                      <i id="icon-8" class="bi"></i>
+            
+                      <i id="icon-9" class="bi"></i>
+               
+                      <i id="icon-10" class="bi"></i>
+            
+                      <i id="icon-11" class="bi"></i>
+            
+                      <i id="icon-12" class="bi"></i>
+              </div>
+          </div>
+            <div class="col-2">
+              <div id="rsbtn"></div>
+            </div>
+      </div>
+      
+    </div>
+    
+    <script src="memoryscript.js"></script>
+</body>
+</html>
