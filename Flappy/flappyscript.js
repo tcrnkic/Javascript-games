@@ -61,13 +61,7 @@ window.onload = function () {
     document.addEventListener("keydown", birdJump);
     canvas.addEventListener("touchstart", birdJump);
 };
-setInterval(()=>{
-    if (window.innerWidth<490){
-        document.getElementById("control").innerHTML= "CLICK the screen";
-    }else{
-        document.getElementById("control").innerHTML= "Press SPACE";
-    }
-},100)
+
 function update(){
     requestAnimationFrame(update);
     if (kraj){
